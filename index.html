@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducción a JavaScript</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+ <div class="container">
+    <h1>🍈 Mis Frutas 🍈</h1>
+
+    <form id="form-fruta" class="form-producto">
+      <div class="input-group">
+        <label for="fruta">Fruta:</label>
+        <input type="text" id="fruta" placeholder="Ej: Plátano" required>
+      </div>
+
+      <div class="input-group">
+        <label for="precio">Precio ($):</label>
+        <input type="number" id="precio" placeholder="Ej: 1500" required>
+      </div>
+
+      <div class="input-group">
+        <label for="calidad">Calidad:</label>
+        <select id="calidad" required>
+          <option value="Excelente">Excelente</option>
+          <option value="Buena">Buena</option>
+          <option value="Regular">Regular</option>
+        </select>
+      </div>
+
+      <button type="submit" id="btn-agregar">+ Agregar Fruta</button>
+    </form>
+
+    <div class="search-box">
+      <input type="text" id="input-buscar" placeholder="Buscar fruta en el catálogo...">
+    </div>
+
+    <div class="resumen-inventario">
+        <button type="button" id="btn-vaciar" class="btn-vaciar">Vaciar catálogo</button>
+        <p>Variedades evaluadas: <span id="total-variedades">0</span></p>
+        <p>Valor total del inventario: <strong id="valor-total">$0</strong></p>
+    </div>
+
+    <div id="aviso" class="aviso hidden">
+        <span id="aviso-texto"></span>
+        <button type="button" id="btn-cerrar-aviso" aria-label="Cerrar aviso">✕</button>
+    </div>
+
+    <div id="feedback" class="feedback hidden"></div>
+
+    <div id="contenedor-frutas" class="lista-productos"></div>
+  </div>
+
+  <script src="./js/main.js"></script>
+</body>
+</html>
